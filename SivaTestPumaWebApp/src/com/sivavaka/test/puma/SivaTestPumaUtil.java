@@ -21,7 +21,7 @@ import com.ibm.portal.um.User;
 * <p>SivaTestPumaUtil class which describes not so frequently used PUMA scenario's like below. </p>
 * <p>
 * 1. Accessing the PUMA from webapp deployed on the Portal or Making the PUMA api calls without logging into portal.
-* 2. Searching for multiple users by passing list of Uid’s (or any attribute) without using the wild chars.
+* 2. Searching for multiple users by passing list of Uidâ€™s (or any attribute) without using the wild chars.
 * 3. Paged Search in PUMA.
 * </p>
 * 
@@ -99,8 +99,6 @@ public class SivaTestPumaUtil {
       */
      //public List<User> getListOfUsers(List<String> userIds) throws Exception{
      public String printListOfUsers(List<String> userIds) throws Exception{
-    	 
-          System.out.println("Inside the getUsersByLastName method");
           
           final PumaLocator pumaLocator = pumaHome.getLocator();
           final PumaProfile pumaProfile = pumaHome.getProfile();
@@ -134,7 +132,7 @@ public class SivaTestPumaUtil {
               @Override
               public Void run() {
                    try{
-                	   //search users who have the same last name i.e users with last name as "vaka"
+
                 	  List<User> users = pumaLocator.findUsersByQuery(userIdsListQuery.toString());
                 	  //usersList.addAll(users);
                 	  for(User user : users){
